@@ -1,0 +1,113 @@
+*{
+padding: 0;
+margin:0;
+box-sizing: border-box;
+}
+.card{
+    background-color: rgb(206, 182, 196);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding:10px 10px 10px 10px;
+    overflow: hidden;
+    border-style: double;
+   border-color: rgb(91, 45, 73);
+    box-shadow: 10px 10px 5px rgb(91, 68, 86);   
+}
+
+.container{
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.img{
+  
+    max-width:100%;
+    max-height:auto;
+    object-fit: fill;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:70%;
+    overflow: hidden; 
+}
+.row2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:30%;
+    overflow: hidden;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.head{
+    background-color:rgb(125, 91, 117);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: cursive;
+    color: blanchedalmond; 
+}
+
+.footer{
+    width: 100%;
+    justify-content: flex-end;
+    line-height: 30px;
+    display: flex;
+    padding-right: 10px;
+    font-size: 12px;;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:rgb(125, 91, 117);
+    color: blanchedalmond;
+}
+
+
+  @media (min-width: 973px) and (max-width:1140px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-items: center;
+    }
+    .card{
+        grid-column: 1fr;
+        width: auto;
+        height: min-content;
+    } 
+}
+
+@media (min-width: 648px) and (max-width:973px) {
+    .container{
+        display: grid;
+        height: auto;
+        width: auto;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+    }
+    .card{
+        grid-column: 1fr;
+        width: auto;
+        height: min-content;
+    } 
+}
+@media (max-width: 648px) {
+    .container{
+        display: grid;
+        height: auto;
+        width: auto;
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .card{
+        grid-column: 1fr;
+        width: auto;
+        height: fit-content;
+    } 
+}
